@@ -165,17 +165,10 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-navy)] border-b border-white/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo placeholder */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-[var(--color-pipe-accent)] rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M3 10h11M9 21V3m0 0L4 8m5-5l5 5M13 10a4 4 0 004 4h2" />
-            </svg>
-          </div>
-          <div>
-            <p className="text-white font-bold text-sm leading-tight font-[var(--font-heading)]">Twin Cities</p>
-            <p className="text-[var(--color-pipe-bright)] text-xs leading-tight font-semibold tracking-wide">PLUMBING PRO</p>
+          <div className="h-9 px-4 bg-white/10 border border-dashed border-white/30 rounded-lg flex items-center justify-center">
+            <span className="text-white/50 text-sm font-medium tracking-wide">[ Your Logo Here ]</span>
           </div>
         </div>
 
@@ -624,13 +617,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 bg-[var(--color-pipe-accent)] rounded-lg flex items-center justify-center">
-              <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                  d="M3 10h11M9 21V3m0 0L4 8m5-5l5 5M13 10a4 4 0 004 4h2" />
-              </svg>
-            </div>
-            <span className="text-white font-semibold text-sm font-[var(--font-heading)]">Twin Cities Plumbing Pro</span>
+            <span className="text-white/60 text-sm font-semibold font-[var(--font-heading)]">Twin Cities Plumbing Pro</span>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-sm">
             <a href={PHONE_HREF} className="hover:text-white transition-colors">{PHONE}</a>
