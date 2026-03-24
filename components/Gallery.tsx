@@ -5,28 +5,28 @@ import ScrollReveal from "./ScrollReveal";
 
 const images = [
   {
-    src: "/images/bathroom.png",
+    src: "/images/bathroom.webp",
     alt: "Luxury bathroom renovation Twin Cities",
     label: "Bathroom Remodel",
     span: "lg:col-span-2 lg:row-span-2",
     height: 560,
   },
   {
-    src: "/images/tools.png",
+    src: "/images/tools.webp",
     alt: "Professional plumbing tools and equipment",
     label: "Pro Equipment",
     span: "",
     height: 260,
   },
   {
-    src: "/images/hands.png",
+    src: "/images/hands.webp",
     alt: "Expert plumber repairing sink drain",
     label: "Expert Repair",
     span: "",
     height: 260,
   },
   {
-    src: "/images/exterior.png",
+    src: "/images/exterior.webp",
     alt: "Minneapolis home plumbing service",
     label: "Local Service",
     span: "lg:col-span-2",
@@ -53,14 +53,13 @@ export default function Gallery() {
         </div>
 
         {/* Masonry-style grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" style={{ gridTemplateRows: "260px 300px" }}>
           {images.map((img, i) => (
             <ScrollReveal
               key={img.src}
               dir="scale"
               delay={i * 80}
               className={`relative rounded-2xl overflow-hidden group ${img.span}`}
-              style={{ height: img.height }}
             >
               <Image
                 src={img.src}

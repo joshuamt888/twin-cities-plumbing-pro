@@ -17,7 +17,7 @@ export default function CTA() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/exterior.png"
+          src="/images/exterior.webp"
           alt="Twin Cities neighborhood"
           fill
           className="object-cover opacity-15"

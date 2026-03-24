@@ -32,7 +32,7 @@ export default function About() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/technician.png"
+                  src="/images/technician.webp"
                   alt="Twin Cities Plumbing Pro technician inspecting water heater"
                   width={700}
                   height={520}
@@ -58,9 +58,6 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-48 h-48 bg-[#1e6bff]/5 rounded-full -z-10" />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#f5a623]/10 rounded-full -z-10" />
             </div>
           </ScrollReveal>
 
