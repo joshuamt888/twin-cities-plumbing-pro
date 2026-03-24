@@ -60,7 +60,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 sm:pt-20 pb-20 sm:pb-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 sm:pt-20 pb-28 sm:pb-24">
         {/* Eyebrow */}
         <p className="text-white text-xs sm:text-sm uppercase tracking-[0.2em] mb-6 sm:mb-8 animate-fade-in-up delay-100">
           Minneapolis – St. Paul Metro
