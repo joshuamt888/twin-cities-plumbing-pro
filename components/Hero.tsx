@@ -43,7 +43,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#0a1628]">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -60,17 +60,17 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24 pb-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20 sm:pt-24 pb-28 sm:pb-24">
         {/* Eyebrow */}
-        <p className="text-white text-sm uppercase tracking-[0.2em] mb-8 animate-fade-in-up delay-100">
+        <p className="text-white text-xs sm:text-sm uppercase tracking-[0.2em] mb-6 sm:mb-8 animate-fade-in-up delay-100">
           Minneapolis – St. Paul Metro
         </p>
 
         {/* Headline */}
         <div className="animate-fade-in-up delay-250">
           <h1
-            className="text-white font-black leading-[1.0] mb-8"
-            style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)', letterSpacing: '-0.03em' }}
+            className="text-white font-black leading-[1.0] mb-6 sm:mb-8"
+            style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', letterSpacing: '-0.03em' }}
           >
             Licensed Plumbers.
             <span className="block text-[#4d8eff]">Done Right the First Time.</span>
@@ -79,22 +79,22 @@ export default function Hero() {
 
         {/* Subheadline */}
         <div className="animate-fade-in-up delay-400">
-          <p className="text-white text-lg leading-relaxed max-w-xl mx-auto mb-12">
+          <p className="text-white text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-10 sm:mb-12">
             Master-licensed. Same-day service. Upfront pricing. Serving the entire Twin Cities metro.
           </p>
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-550 mb-16">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-550 mb-12 sm:mb-16">
           <a
             href="tel:+16125550190"
-            className="bg-white text-[#0a1628] font-semibold px-8 py-3.5 rounded-full text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5"
+            className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5"
           >
             Call Now
           </a>
           <a
             href="#contact"
-            className="bg-transparent text-white font-semibold px-8 py-3.5 rounded-full text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5"
+            className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5"
           >
             Get a Free Quote
           </a>

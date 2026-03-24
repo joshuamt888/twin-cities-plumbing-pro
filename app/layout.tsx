@@ -25,6 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0a1628" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
