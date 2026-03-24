@@ -43,7 +43,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative min-h-screen min-h-[100dvh] flex items-center justify-center overflow-hidden bg-[#0a1628]">
+    <section className="relative min-h-screen min-h-[100dvh] flex items-start justify-center overflow-hidden bg-[#0a1628]">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -60,7 +60,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 sm:pt-20 pb-28 sm:pb-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 sm:pt-32 pb-28 sm:pb-24">
         {/* Eyebrow */}
         <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 sm:mb-5 animate-fade-in-up delay-100">
           Minneapolis – St. Paul Metro
