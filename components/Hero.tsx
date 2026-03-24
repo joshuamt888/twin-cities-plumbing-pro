@@ -60,7 +60,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20 sm:pt-24 pb-28 sm:pb-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16 sm:pt-20 pb-20 sm:pb-20">
         {/* Eyebrow */}
         <p className="text-white text-xs sm:text-sm uppercase tracking-[0.2em] mb-6 sm:mb-8 animate-fade-in-up delay-100">
           Minneapolis – St. Paul Metro
@@ -70,7 +70,7 @@ export default function Hero() {
         <div className="animate-fade-in-up delay-250">
           <h1
             className="text-white font-black leading-[1.0] mb-6 sm:mb-8"
-            style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', letterSpacing: '-0.03em' }}
+            style={{ fontSize: 'clamp(2.2rem, 6.5vw, 5rem)', letterSpacing: '-0.03em' }}
           >
             Licensed Plumbers.
             <span className="block text-[#4d8eff]">Done Right the First Time.</span>
@@ -138,13 +138,17 @@ export default function Hero() {
           </div>
 
           {/* Dots */}
-          <div className="flex justify-center gap-1.5 mt-5">
+          <div className="flex justify-center gap-1.5 mt-5 items-center">
             {reviews.map((_, i) => (
               <button
                 key={i}
                 onClick={() => { setVisible(false); setTimeout(() => { setIdx(i); setVisible(true); }, 450); }}
-                className="w-1.5 h-1.5 rounded-full transition-all duration-300"
-                style={{ background: i === idx ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.15)' }}
+                className="rounded-full transition-all duration-300"
+                style={{
+                  width: i === idx ? '20px' : '6px',
+                  height: '6px',
+                  background: i === idx ? 'rgba(255,255,255,0.75)' : 'rgba(255,255,255,0.2)',
+                }}
                 aria-label={`Review ${i + 1}`}
               />
             ))}
