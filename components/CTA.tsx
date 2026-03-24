@@ -110,7 +110,7 @@ export default function CTA() {
                     <select
                       required
                       className="w-full rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
-                      style={{ background: 'rgba(10,22,40,0.9)', border: '1px solid rgba(255,255,255,0.15)' }}
+                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
                     >
                       <option value="" style={{ background: '#0a1628' }}>Select a service...</option>
                       <option style={{ background: '#0a1628' }}>Emergency Plumbing</option>
