@@ -31,7 +31,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" style={{ paddingTop: 'calc(1rem + env(safe-area-inset-top))' }}>
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-[#1e6bff] flex items-center justify-center">
