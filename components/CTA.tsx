@@ -72,8 +72,8 @@ export default function CTA() {
                       type="text"
                       required
                       placeholder="John"
-                      className="w-full rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
-                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+                      className="w-full rounded-xl px-4 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
+                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', height: '50px' }}
                     />
                   </div>
                   <div>
@@ -84,8 +84,8 @@ export default function CTA() {
                       type="text"
                       required
                       placeholder="Smith"
-                      className="w-full rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
-                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+                      className="w-full rounded-xl px-4 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
+                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', height: '50px' }}
                     />
                   </div>
                 </div>
@@ -99,18 +99,18 @@ export default function CTA() {
                       type="tel"
                       required
                       placeholder="(612) 555-0190"
-                      className="w-full rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
-                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+                      className="w-full rounded-xl px-4 text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
+                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', height: '50px' }}
                     />
                   </div>
-                  <div>
+                  <div className="relative">
                     <label className="block text-sm font-semibold text-white/70 mb-1.5">
                       Service Needed
                     </label>
                     <select
                       required
-                      className="w-full rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition"
-                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+                      className="w-full rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#1e6bff]/50 transition appearance-none"
+                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', height: '50px' }}
                     >
                       <option value="" style={{ background: '#0a1628' }}>Select a service...</option>
                       <option style={{ background: '#0a1628' }}>Emergency Plumbing</option>
@@ -121,6 +121,9 @@ export default function CTA() {
                       <option style={{ background: '#0a1628' }}>Repiping</option>
                       <option style={{ background: '#0a1628' }}>Other</option>
                     </select>
+                    <svg className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/40 mt-[11px]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
                 </div>
 
