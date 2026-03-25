@@ -43,7 +43,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#0a1628]">
+    <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-[#0a1628]">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
@@ -53,8 +53,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a1628] to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-20">
+      {/* Main content — centered in available space above CTAs */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-4">
 
         {/* Eyebrow */}
         <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 animate-fade-in-up delay-100">
@@ -80,7 +80,7 @@ export default function Hero() {
         </div>
 
         {/* Reviews */}
-        <div className="animate-fade-in-up delay-700 mb-7">
+        <div className="animate-fade-in-up delay-700 w-full">
           <div className="flex items-center gap-4 mb-4">
             <div className="flex-1 h-px bg-white/30" />
             <span className="text-white/70 text-xs uppercase tracking-[0.2em]">What clients say</span>
@@ -114,16 +114,16 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* CTAs */}
-        <div className="animate-fade-in-up delay-1000 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="tel:+16125550190" className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center">
-            Call Now
-          </a>
-          <a href="#contact" className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center">
-            Get a Free Quote
-          </a>
-        </div>
+      </div>
 
+      {/* CTAs — pinned to bottom of hero */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 animate-fade-in-up delay-1000 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tel:+16125550190" className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center">
+          Call Now
+        </a>
+        <a href="#contact" className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center">
+          Get a Free Quote
+        </a>
       </div>
     </section>
   );
