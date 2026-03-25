@@ -69,28 +69,31 @@ export default function Hero() {
       </div>
 
       {/* Main content — vertically centered in remaining space */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center max-w-4xl mx-auto w-full px-6 text-center pt-28 pb-6">
-        {/* Eyebrow */}
-        <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 sm:mb-5 animate-fade-in-up delay-100">
-          Minneapolis – St. Paul Metro
-        </p>
-
-        {/* Headline */}
-        <div className="animate-fade-in-up delay-250">
-          <h1
-            className="text-white font-black leading-[1.0] mb-4 sm:mb-5"
-            style={{ fontSize: 'clamp(1.9rem, 5.8vw, 4.4rem)', letterSpacing: '-0.03em' }}
-          >
-            Licensed Plumbers.
-            <span className="block text-[#4d8eff]">Done Right the First Time.</span>
-          </h1>
-        </div>
-
-        {/* Subheadline */}
-        <div className="animate-fade-in-up delay-400">
-          <p className="text-white text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-7 sm:mb-8">
-            Master-licensed. Same-day service. Upfront pricing. Serving the entire Twin Cities metro.
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-between max-w-4xl mx-auto w-full px-6 text-center pt-28 pb-10">
+        {/* Top group */}
+        <div className="w-full">
+          {/* Eyebrow */}
+          <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 sm:mb-5 animate-fade-in-up delay-100">
+            Minneapolis – St. Paul Metro
           </p>
+
+          {/* Headline */}
+          <div className="animate-fade-in-up delay-250">
+            <h1
+              className="text-white font-black leading-[1.0] mb-4 sm:mb-5"
+              style={{ fontSize: 'clamp(1.9rem, 5.8vw, 4.4rem)', letterSpacing: '-0.03em' }}
+            >
+              Licensed Plumbers.
+              <span className="block text-[#4d8eff]">Done Right the First Time.</span>
+            </h1>
+          </div>
+
+          {/* Subheadline */}
+          <div className="animate-fade-in-up delay-400">
+            <p className="text-white text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+              Master-licensed. Same-day service. Upfront pricing. Serving the entire Twin Cities metro.
+            </p>
+          </div>
         </div>
 
         {/* Rotating Reviews */}
@@ -149,7 +152,7 @@ export default function Hero() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8 animate-fade-in-up delay-1000 w-full">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-1000 w-full">
           <a
             href="tel:+16125550190"
             className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center"
