@@ -45,7 +45,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section ref={sectionRef} className="relative flex flex-col overflow-hidden bg-[#0a1628]" style={{ minHeight: '120svh' }}>
+    <section ref={sectionRef} className="relative flex flex-col overflow-hidden bg-[#0a1628] min-h-[120svh] md:min-h-[100svh]">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
@@ -55,7 +55,7 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-12">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-[22svh] md:pb-12">
 
         {/* Eyebrow */}
         <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 animate-fade-in-up delay-100">
