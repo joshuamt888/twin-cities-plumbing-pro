@@ -43,7 +43,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative min-h-screen min-h-[100dvh] flex items-start sm:items-center justify-center overflow-hidden bg-[#0a1628]">
+    <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-[#0a1628]">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -59,8 +59,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a1628] to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 sm:pt-20 pb-28 sm:pb-20">
+      {/* Main content — vertically centered in remaining space */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center max-w-4xl mx-auto w-full px-6 text-center pt-28 pb-6">
         {/* Eyebrow */}
         <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 sm:mb-5 animate-fade-in-up delay-100">
           Minneapolis – St. Paul Metro
@@ -84,24 +84,8 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-550 mb-8 sm:mb-10">
-          <a
-            href="tel:+16125550190"
-            className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5"
-          >
-            Call Now
-          </a>
-          <a
-            href="#contact"
-            className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5"
-          >
-            Get a Free Quote
-          </a>
-        </div>
-
         {/* Rotating Reviews */}
-        <div className="animate-fade-in delay-1000">
+        <div className="animate-fade-in delay-1000 w-full">
           {/* Divider */}
           <div className="flex items-center gap-4 mb-4">
             <div className="flex-1 h-px bg-white/30" />
@@ -154,6 +138,22 @@ export default function Hero() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* CTAs — pinned to bottom */}
+      <div className="relative z-10 flex flex-col sm:flex-row gap-3 justify-center px-6 pb-12 animate-fade-in-up delay-550">
+        <a
+          href="tel:+16125550190"
+          className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center"
+        >
+          Call Now
+        </a>
+        <a
+          href="#contact"
+          className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center"
+        >
+          Get a Free Quote
+        </a>
       </div>
     </section>
   );
