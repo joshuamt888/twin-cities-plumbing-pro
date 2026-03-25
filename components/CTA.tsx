@@ -32,10 +32,6 @@ export default function CTA() {
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Header */}
         <ScrollReveal delay={0} className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-[#1e6bff]/20 border border-[#1e6bff]/30 rounded-full px-4 py-2 text-[#4d8eff] text-sm font-medium mb-8">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Available Now — Request a Free Quote
-          </div>
           <h2
             className="text-white font-black mb-4"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", letterSpacing: "-0.02em", lineHeight: 1.1 }}
