@@ -43,7 +43,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-[#0a1628]">
+    <section className="relative flex flex-col overflow-hidden bg-[#0a1628]" style={{ minHeight: '100svh' }}>
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
@@ -53,8 +53,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a1628] to-transparent" />
       </div>
 
-      {/* Main content — centered in available space above CTAs */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-4">
+      {/* Main content */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-44">
 
         {/* Eyebrow */}
         <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 animate-fade-in-up delay-100">
@@ -116,8 +116,8 @@ export default function Hero() {
 
       </div>
 
-      {/* CTAs — pinned to bottom of hero */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 animate-fade-in-up delay-1000 flex flex-col sm:flex-row gap-3 justify-center">
+      {/* CTAs — absolute bottom of hero */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-10 animate-fade-in-up delay-1000 flex flex-col sm:flex-row gap-3 justify-center max-w-4xl mx-auto">
         <a href="tel:+16125550190" className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center">
           Call Now
         </a>
