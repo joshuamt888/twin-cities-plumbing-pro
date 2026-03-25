@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const reviews = [
   {
@@ -28,6 +28,8 @@ const reviews = [
 export default function Hero() {
   const [idx, setIdx] = useState(0);
   const [visible, setVisible] = useState(true);
+  const sectionRef = useRef<HTMLElement>(null);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,18 +45,17 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative flex flex-col overflow-hidden bg-[#0a1628]" style={{ minHeight: '100svh' }}>
+    <section ref={sectionRef} className="relative flex flex-col overflow-hidden bg-[#0a1628]" style={{ minHeight: '120svh' }}>
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/75" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a1628] to-transparent" />
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-44">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 text-center pt-28 pb-12">
 
         {/* Eyebrow */}
         <p className="text-white text-xs uppercase tracking-[0.2em] mb-4 animate-fade-in-up delay-100">
@@ -72,13 +73,6 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* Subheadline */}
-        <div className="animate-fade-in-up delay-400">
-          <p className="text-white text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-7">
-            Master-licensed. Same-day service. Upfront pricing. Serving the entire Twin Cities metro.
-          </p>
-        </div>
-
         {/* Reviews */}
         <div className="animate-fade-in-up delay-700 w-full">
           <div className="flex items-center gap-4 mb-4">
@@ -87,19 +81,19 @@ export default function Hero() {
             <div className="flex-1 h-px bg-white/30" />
           </div>
           <div style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(6px)', transition: 'opacity 0.45s ease, transform 0.45s ease' }}>
-            <div className="flex justify-center gap-0.5 mb-3">
+            <p className="text-white text-sm italic leading-relaxed max-w-md mx-auto mb-3">
+              &ldquo;{review.quote}&rdquo;
+            </p>
+            <p className="text-white/80 text-xs uppercase tracking-[0.15em] mb-3">
+              — {review.name}, {review.city}
+            </p>
+            <div className="flex justify-center gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
-            <p className="text-white text-sm italic leading-relaxed max-w-md mx-auto mb-3">
-              &ldquo;{review.quote}&rdquo;
-            </p>
-            <p className="text-white/80 text-xs uppercase tracking-[0.15em]">
-              — {review.name}, {review.city}
-            </p>
           </div>
           <div className="flex justify-center gap-1.5 mt-4 items-center">
             {reviews.map((_, i) => (
@@ -114,16 +108,16 @@ export default function Hero() {
           </div>
         </div>
 
-      </div>
+        {/* CTAs — below reviews */}
+        <div className="animate-fade-in-up delay-1000 flex flex-col sm:flex-row gap-3 justify-center w-full mt-8">
+          <a href="tel:+16125550190" className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center">
+            Call Now
+          </a>
+          <a href="#contact" className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center">
+            Get a Free Quote
+          </a>
+        </div>
 
-      {/* CTAs — absolute bottom of hero */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-10 animate-fade-in-up delay-1000 flex flex-col sm:flex-row gap-3 justify-center max-w-4xl mx-auto">
-        <a href="tel:+16125550190" className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center">
-          Call Now
-        </a>
-        <a href="#contact" className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center">
-          Get a Free Quote
-        </a>
       </div>
     </section>
   );
