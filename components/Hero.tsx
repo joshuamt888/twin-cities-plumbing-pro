@@ -28,6 +28,15 @@ const reviews = [
 export default function Hero() {
   const [idx, setIdx] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [heroHeight, setHeroHeight] = useState('100svh');
+
+  useEffect(() => {
+    // Use actual window.innerHeight — the only reliable value on iOS Safari
+    const setHeight = () => setHeroHeight(`${window.innerHeight}px`);
+    setHeight();
+    window.addEventListener('resize', setHeight);
+    return () => window.removeEventListener('resize', setHeight);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,7 +52,7 @@ export default function Hero() {
   const review = reviews[idx];
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-[#0a1628]">
+    <section className="relative flex flex-col overflow-hidden bg-[#0a1628]" style={{ minHeight: heroHeight }}>
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -85,7 +94,7 @@ export default function Hero() {
         </div>
 
         {/* Rotating Reviews */}
-        <div className="animate-fade-in delay-1000 w-full">
+        <div className="animate-fade-in-up delay-1000 w-full">
           {/* Divider */}
           <div className="flex items-center gap-4 mb-4">
             <div className="flex-1 h-px bg-white/30" />
@@ -138,22 +147,22 @@ export default function Hero() {
             ))}
           </div>
         </div>
-      </div>
 
-      {/* CTAs — pinned to bottom */}
-      <div className="relative z-10 flex flex-col sm:flex-row gap-3 justify-center px-6 pb-12 animate-fade-in-up delay-550">
-        <a
-          href="tel:+16125550190"
-          className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center"
-        >
-          Call Now
-        </a>
-        <a
-          href="#contact"
-          className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center"
-        >
-          Get a Free Quote
-        </a>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8 animate-fade-in-up delay-550 w-full">
+          <a
+            href="tel:+16125550190"
+            className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center"
+          >
+            Call Now
+          </a>
+          <a
+            href="#contact"
+            className="bg-transparent text-white font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base border border-white/40 transition-all duration-200 hover:border-white/80 hover:bg-white/5 hover:-translate-y-0.5 text-center"
+          >
+            Get a Free Quote
+          </a>
+        </div>
       </div>
     </section>
   );
