@@ -94,7 +94,7 @@ export default function Hero() {
         </div>
 
         {/* Rotating Reviews */}
-        <div className="animate-fade-in-up delay-1000 w-full">
+        <div className="animate-fade-in-up delay-700 w-full">
           {/* Divider */}
           <div className="flex items-center gap-4 mb-4">
             <div className="flex-1 h-px bg-white/30" />
@@ -149,7 +149,7 @@ export default function Hero() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8 animate-fade-in-up delay-550 w-full">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8 animate-fade-in-up delay-1000 w-full">
           <a
             href="tel:+16125550190"
             className="bg-white text-[#0a1628] font-semibold px-6 py-3 sm:px-8 sm:py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/90 hover:-translate-y-0.5 text-center"
